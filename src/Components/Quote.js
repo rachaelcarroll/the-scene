@@ -7,31 +7,27 @@ import PropTypes from 'prop-types';
 
 export const Quote = ({faves, saveFave}) => {
     const [ quote, setQuote ] = useState('');
-    const [ isLoading, setIsLoading ] = useState(false)
+    const [ isLoading, setIsLoading ] = useState(true)
     const [ error, setError ] = useState('');
 
     const getQuote = async () => {
-        setIsLoading(true)
         const url = 'https://binaryjazz.us/wp-json/genrenator/v1/story/1'
         try {
             let response = await fetch(url)
             const quote = await response.json()
             setQuote(quote)
             setIsLoading(false)
-            console.log("FETCHED QUOTE", quote)
-        } catch(error) {
+            console.log("FETCHED", quote)
+        } catch (error) {
             setError(error.message)
         }
     }
 
-    
     useEffect(() => {
         getQuote()
     }, [])
 
-    const handleClick = (e) => {
-        e.preventDefault()
-        setQuote('');
+    const handleClick = () => {
         getQuote();
     }
 
@@ -46,7 +42,7 @@ export const Quote = ({faves, saveFave}) => {
         <section className='quote-container'>
             <article>{quote}</article>
             <div className='button-options'>
-                <button className='shuffle-quote' onClick={(e) => handleClick(e)}>Shuffle that scene.</button>
+                <button className='shuffle-quote' onClick={() => handleClick()}>Shuffle that scene.</button>
                 <button className='save-to-faves' onClick={() => saveFave(quote)}>Save to faves.</button>
             </div>
         </section>
