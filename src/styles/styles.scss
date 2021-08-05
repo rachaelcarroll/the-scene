@@ -1,29 +1,29 @@
 /* ==========================================================================
 l - Settings - Global Variables
 ========================================================================== */
-// @import "./i-settings/colors.scss";
-@import "./i-settings/typography.scss";
+@import "./i-settings/_colors.scss";
+@import "./i-settings/_typography.scss";
 
 /* ==========================================================================
 ll - Tools - Mixins
 ========================================================================== */
-@import "./ii-tools/keyframes.scss";
-@import "./ii-tools/mixins.scss";
+@import "./ii-tools/_keyframes.scss";
+@import "./ii-tools/_mixins.scss";
 
 /* ==========================================================================
 lll - Generic - Resets & Normalize Styles
 ========================================================================== */
-@import './iii-generic/generics.scss';
+@import './iii-generic/_generics.scss';
 
 /* ==========================================================================
 lV - Elements - Semanitic Bare Elements 
 ========================================================================== */
-@import './iv-elements/elements.scss';
+@import './iv-elements/_elements.scss';
 
 /* ==========================================================================
 V -  Components -  Specific UI components
 ========================================================================== */
-@import "./V-components/App.scss";
-@import "./V-components/Header.scss";
-@import "./V-components/Welcome.scss";
-@import "./V-components/Faves.scss";
+@import "./V-components/_App.scss";
+@import "./V-components/_Header.scss";
+@import "./V-components/_Welcome.scss";
+@import "./V-components/_Faves.scss";
