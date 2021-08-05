@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import { fetchQuote } from '../Utilities/apiCalls';
 
 
-export const Quote = () => {
+export const Quote = ({faves}) => {
     const [ quote, setQuote ] = useState('');
-    const [ faves, setFaves ] = useState([]);
+    // const [ faves, setFaves ] = useState([]);
 
     const getQuote = () => {
         fetchQuote()
@@ -27,6 +27,7 @@ export const Quote = () => {
         e.preventDefault()
     //prepends the favorite to the front of the list
         setFaves([quote].concat(faves))
+        console.log(faves)
     }
 
     return (
