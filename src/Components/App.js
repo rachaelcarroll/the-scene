@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import { Header } from './Header.js';
-import { Quote } from './Question';
-import { Faves } from './QuestionBoard';
-import { Welcome } from './QuestionDetails';
+import { Quote } from './Quote';
+import { Faves } from './Faves';
+import { Welcome } from './Welcome';
 // import { fetchQuote } from '../Utilities/apiCalls';
 import PropTypes from 'prop-types';
 
@@ -13,7 +13,7 @@ export const App = () => {
   
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Switch>
           <Route exact path= '/welcome' component={ Welcome }/>
