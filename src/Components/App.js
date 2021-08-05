@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 export const App = () => {
   // const [ loading, setLoading ] = useState(true);
   // const [ error, setError ] = useState('');
+  const [ faves, setFaves ] = useState([]);
   
   return (
     <>
@@ -17,8 +18,16 @@ export const App = () => {
       <main>
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
-          <Route exact path= '/quote' component={ Quote }/>
-          <Route exact path= '/faves' component={ Faves }/>
+          <Route exact path= '/quote' render={() => 
+          <Quote 
+            faves={faves}
+          />
+          }/>
+          <Route exact path= '/faves' render={() =>
+          <Faves 
+            faves={faves}
+          />
+          }/>
         </Switch>
       </main>
     </>
