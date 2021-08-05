@@ -13,7 +13,7 @@ export const App = () => {
   
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main>
         <Switch>
           <Route exact path= '/welcome' component={ Welcome }/>
