@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import { Header } from './Header.js';
 import { Quote } from './Quote';
@@ -11,7 +11,20 @@ export const App = () => {
   // const [ loading, setLoading ] = useState(true);
   // const [ error, setError ] = useState('');
   const [ faves, setFaves ] = useState([]);
-  
+
+  const saveFave = (quote) => {
+    // e.preventDefault()
+  //prepends the favorite to the front of the list
+    if(!faves.includes(quote)){
+      setFaves(faves.concat(quote))
+      console.log(faves)
+    }
+  }
+
+  // useEffect(() => {
+  //     saveFave()
+  // }, [])
+
   return (
     <>
       <Header />
@@ -20,6 +33,7 @@ export const App = () => {
           <Route exact path= '/' component={ Welcome }/>
           <Route exact path= '/quote' render={() => 
           <Quote 
+            saveFave={saveFave}
             faves={faves}
           />
           }/>
