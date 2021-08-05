@@ -16,7 +16,7 @@ export const App = () => {
       <Header />
       <main>
         <Switch>
-          <Route exact path= '/welcome' component={ Welcome }/>
+          <Route exact path= '/' component={ Welcome }/>
           <Route exact path= '/quote' component={ Quote }/>
           <Route exact path= '/faves' component={ Faves }/>
         </Switch>
