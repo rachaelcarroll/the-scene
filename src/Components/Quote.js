@@ -18,11 +18,13 @@ export const Quote = () => {
         getQuote()
     }, [])
 
-    handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         getQuote();
     }
 
-    saveFave = () => {
+    const saveFave = (e) => {
+        e.preventDefault()
     //prepends the favorite to the front of the list
         setFaves([quote].concat(faves))
     }
@@ -31,32 +33,10 @@ export const Quote = () => {
         <section className='quote-container'>
             <article>{quote}</article>
             <div className='button-options'>
-                <button className='shuffle-quote' onClick={() => handleClick()}>Shuffle that scene.</button>
-                <button className='save-to-faves' onClick={() => saveFave()}>Save to faves.</button>
+                <button className='shuffle-quote' onClick={(e) => handleClick(e)}>Shuffle that scene.</button>
+                <button className='save-to-faves' onClick={(e) => saveFave(e)}>Save to faves.</button>
             </div>
         </section>
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
