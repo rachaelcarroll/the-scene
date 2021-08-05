@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Route, Switch, NavLink } from 'react-router-dom';
+import { Header } from './Header.js';
+import { Quote } from './Quote';
+import { Faves } from './Faves';
+import { Welcome } from './Welcome';
+// import { fetchQuote } from '../Utilities/apiCalls';
+import PropTypes from 'prop-types';
 
-function App() {
+export const App = () => {
+  // const [ loading, setLoading ] = useState(true);
+  // const [ error, setError ] = useState('');
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Header /> */}
+      <main>
+        <Switch>
+          <Route exact path= '/welcome' component={ Welcome }/>
+          <Route exact path= '/quote' component={ Quote }/>
+          <Route exact path= '/faves' component={ Faves }/>
+        </Switch>
+      </main>
+    </>
   );
 }
 

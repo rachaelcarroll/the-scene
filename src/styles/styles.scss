@@ -1,24 +1,24 @@
 /* ==========================================================================
 l - Settings - Global Variables
 ========================================================================== */
-@import "./l-settings/colors.scss";
-@import "./l-settings/typography.scss";
+@import "./i-settings/colors.scss";
+@import "./i-settings/typography.scss";
 
 /* ==========================================================================
 ll - Tools - Mixins
 ========================================================================== */
-@import "./ll-tools/keyframes.scss";
-@import "./ll-tools/mixins.scss";
+@import "./ii-tools/keyframes.scss";
+@import "./ii-tools/mixins.scss";
 
 /* ==========================================================================
 lll - Generic - Resets & Normalize Styles
 ========================================================================== */
-@import './lll-generic/generics.scss';
+@import './iii-generic/generics.scss';
 
 /* ==========================================================================
 lV - Elements - Semanitic Bare Elements 
 ========================================================================== */
-@import './lV-elements/elements.scss';
+@import './iv-elements/elements.scss';
 
 /* ==========================================================================
 V -  Components -  Specific UI components
