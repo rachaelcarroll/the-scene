@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
 
 export const Header = () => {
 
