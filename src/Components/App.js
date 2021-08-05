@@ -1,7 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Route, Switch, NavLink } from 'react-router-dom';
+import { Header } from './Header.js';
+import { Quote } from './Question';
+import { Faves } from './QuestionBoard';
+import { Welcome } from './QuestionDetails';
+import { fetchQuote } from '../Utilities/apiCalls';
+import PropTypes from 'prop-types';
 
-function App() {
+export const App = () => {
+  const [ loading, setLoading ] = useState(true);
+  const [ error, setError ] = useState('');
+  
+  
   return (
     <div className="App">
       <header className="App-header">
