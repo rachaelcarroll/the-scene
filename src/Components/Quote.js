@@ -13,7 +13,7 @@ export const Quote = ({ saveFave, quote, getQuote }) => {
     }
     return (
         <section className='quote-container'>
-            <article>{quote}</article>
+            <article className='quote'>{quote}</article>
             <div className='button-options'>
                 <button className='shuffle-quote' onClick={() => getQuote()}>Shuffle that scene.</button>
                 <button className='save-to-faves' onClick={() => passFave(quote)}>Save to faves.</button>

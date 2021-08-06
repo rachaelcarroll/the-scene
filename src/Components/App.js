@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Switch, NavLink } from 'react-router-dom';
 import { Header } from './Header.js';
 import { Quote } from './Quote';
-import { Faves } from './Faves';
+import { Faves } from './FavesContainer';
 import { Welcome } from './Welcome';
 // import { fetchQuote } from '../Utilities/apiCalls';
 import PropTypes from 'prop-types';
