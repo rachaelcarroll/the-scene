@@ -10,6 +10,7 @@ export const FavesContainer = ({faves}) => {
         return (
             <Fave 
             key={i}
+            id={i}
             singleFave={fave}
             />
         )
