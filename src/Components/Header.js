@@ -6,9 +6,11 @@ export const Header = () => {
 
     return (
         <nav>
-            <header>
-                <h1>TS</h1>
-            </header>
+            <NavLink to = '/'>
+                <header>
+                    <h1>TS</h1>
+                </header>
+            </NavLink>
             <div className='nav-btns'>
             <Route exact path='/quote' render={() => 
                 <NavLink to ='/faves'>
