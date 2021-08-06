@@ -43,6 +43,13 @@ export const App = () => {
       console.log("AFTER ARRAY>>>", faves)
     }
 
+    const removeFave = (event) => {
+      const updatedFaves = faves.filter(quote => {
+        return quote !== parseFloat(event.target.id) 
+      })
+      setState(updatedFaves)
+    }
+
 
   return (
     <>
@@ -60,6 +67,7 @@ export const App = () => {
           <Route exact path= '/faves' render={() =>
           <Faves 
             faves={faves}
+            removeFave={removeFave}
           />
           }/>
         </Switch>
