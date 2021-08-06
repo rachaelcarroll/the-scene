@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
-export const FavesContainer = ({faves}) => {
+export const FavesContainer = ({faves, removeFave}) => {
 
     const faveQuote = faves.map((fave, i) => {
         return (
@@ -12,6 +12,7 @@ export const FavesContainer = ({faves}) => {
             key={i}
             id={i}
             favorite={fave}
+            removeFave={removeFave}
             />
         )
     })
