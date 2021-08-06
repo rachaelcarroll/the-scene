@@ -65,7 +65,7 @@ export const App = () => {
           />
           }/>
           <Route exact path= '/faves' render={() =>
-          <Faves 
+          <FavesContainer 
             faves={faves}
             removeFave={removeFave}
           />
