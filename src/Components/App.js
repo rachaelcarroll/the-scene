@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Header } from './Header.js';
 import { Quote } from './Quote';
 import { FavesContainer } from './FavesContainer';
 import { Welcome } from './Welcome';
-// import { fetchQuote } from '../Utilities/apiCalls';
-import PropTypes from 'prop-types';
 
 export const App = () => {
-  // const [ loading, setLoading ] = useState(true);
-  // const [ error, setError ] = useState('');
-  // const defaultValue = []
   const [ faves, setFaves ] = useState([]);
   const [ quote, setQuote ] = useState('');
   const [ isLoading, setIsLoading ] = useState(true)
@@ -22,7 +17,6 @@ export const App = () => {
             let response = await fetch(url)
             const quote = await response.json()
             setIsLoading(false)
-            console.log("FETCHED", quote)
             return setQuote(quote)
         } catch (error) {
             setError(error.message)
