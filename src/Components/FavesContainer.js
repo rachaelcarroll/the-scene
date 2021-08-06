@@ -20,7 +20,7 @@ export const FavesContainer = ({faves, removeFave}) => {
 
     return (
         <article className='fave-quote'>
-            <p>{faveQuote}</p>
+            {faveQuote}
         </article>
     )
 
