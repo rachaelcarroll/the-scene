@@ -6,9 +6,12 @@ import PropTypes from 'prop-types';
 
 export const FavesContainer = ({faves}) => {
 
-    const faveQuote = faves.map(fave => {
+    const faveQuote = faves.map((fave, i) => {
         return (
-            <Fave singleFave={fave}/>
+            <Fave 
+            key={i}
+            singleFave={fave}
+            />
         )
     })
 
