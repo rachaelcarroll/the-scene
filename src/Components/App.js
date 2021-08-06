@@ -47,7 +47,7 @@ export const App = () => {
       const updatedFaves = faves.filter(quote => {
         return quote !== parseFloat(event.target.id) 
       })
-      setState(updatedFaves)
+      setFaves(updatedFaves)
     }
 
 
