@@ -1,6 +1,5 @@
 import React from 'react';
 import { Fave } from './Fave';
-import { NavLink } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
@@ -17,7 +16,6 @@ export const FavesContainer = ({faves, removeFave}) => {
             />
         )
     })
-
 
     return (
         <article className='fave-quote'>
