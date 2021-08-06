@@ -5,11 +5,11 @@ import { faChevronCircleUp, faChevronCircleDown  } from '@fortawesome/free-solid
 import PropTypes from 'prop-types';
 
 
-export const Fave = ({favorite, id}) => {
+export const Fave = ({favorite, id, removeFave}) => {
     return (
         <>
-            <p className='fave-quote'>{quote}</p>
-            <img id={id} onClick={removeFromFavorites} className='trash-icon' src={trashCanIcon} alt='trash can icon to remove from favorites'/>
+            <p className='fave-quote'>{favorite}</p>
+            <button id={id} onClick={removeFave} className='remove-fave' alt='X icon to remove from favorites'/>X<button/>
         </>
       )
 }
