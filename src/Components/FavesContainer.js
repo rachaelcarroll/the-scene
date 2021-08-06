@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-// import { fetchQuote } from '../Utilities/apiCalls';
 
 
 export const FavesContainer = ({faves}) => {
@@ -20,5 +19,8 @@ export const FavesContainer = ({faves}) => {
         </article>
     )
 
+}
 
+FavesContainer.propTypes = {
+    faves: PropTypes.array
 }
