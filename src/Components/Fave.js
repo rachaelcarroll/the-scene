@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { parseDate } from  '../Utilities/util';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleUp, faChevronCircleDown  } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 
@@ -12,4 +9,10 @@ export const Fave = ({favorite, id, removeFave}) => {
             <button id={id} onClick={removeFave} className='remove-fave' alt='X icon to remove from favorites'/>X<button/>
         </>
       )
+}
+
+Fave.propTypes = {
+    favorite: PropTypes.string,
+    id: PropTypes.number,
+    removeFave: PropTypes.func
 }
