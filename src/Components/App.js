@@ -34,8 +34,9 @@ export const App = () => {
     }, [])
  
     const saveFave = (faveQuote) => {
-    
-      setFaves([faveQuote].concat(faves))
+      if(!faves.includes(faveQuote)){
+        setFaves([faveQuote].concat(faves))
+      }
     }
 
     const removeFave = (event) => {
