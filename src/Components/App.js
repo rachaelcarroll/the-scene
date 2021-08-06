@@ -44,6 +44,8 @@ export const App = () => {
     }
 
     const removeFave = (event) => {
+      console.log("EVENT REMOVE", event)
+      console.log("THESE ARE THE FAVES BEFORE REMOVING", faves)
       const updatedFaves = faves.filter(quote => {
         return quote !== parseFloat(event.target.id) 
       })
