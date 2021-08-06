@@ -10,20 +10,39 @@ import PropTypes from 'prop-types';
 export const App = () => {
   // const [ loading, setLoading ] = useState(true);
   // const [ error, setError ] = useState('');
+  // const defaultValue = []
   const [ faves, setFaves ] = useState([]);
+  const [ quote, setQuote ] = useState('');
+  const [ isLoading, setIsLoading ] = useState(true)
+  const [ error, setError ] = useState('');
 
-  const saveFave = (quote) => {
-    // e.preventDefault()
-  //prepends the favorite to the front of the list
-    if(!faves.includes(quote)){
-      setFaves(faves.concat(quote))
-      console.log(faves)
+    const getQuote = async () => {
+        const url = 'https://binaryjazz.us/wp-json/genrenator/v1/story/1'
+        try {
+            let response = await fetch(url)
+            const quote = await response.json()
+            setIsLoading(false)
+            console.log("FETCHED", quote)
+            return setQuote(quote)
+        } catch (error) {
+            setError(error.message)
+        }
     }
-  }
 
-  // useEffect(() => {
-  //     saveFave()
-  // }, [])
+    useEffect(() => {
+        getQuote()
+    }, [])
+ 
+    const saveFave = (faveQuote) => {
+    
+      console.log("FAVES ARRAY BEFORE >>>", faves)
+      console.log("THE QUOTE??", faveQuote)
+      setFaves([faveQuote].concat(faves))
+      // if (!faves.includes(faveQuote)){
+      // setFaves(faves => [...faves, faveQuote])
+      console.log("AFTER ARRAY>>>", faves)
+    }
+
 
   return (
     <>
@@ -34,7 +53,8 @@ export const App = () => {
           <Route exact path= '/quote' render={() => 
           <Quote 
             saveFave={saveFave}
-            faves={faves}
+            quote={quote}
+            getQuote={getQuote}
           />
           }/>
           <Route exact path= '/faves' render={() =>
