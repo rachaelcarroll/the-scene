@@ -19,3 +19,9 @@ export const Quote = ({ saveFave, quote, getQuote }) => {
         </section>
     )
 }
+
+Quote.propTypes = {
+    saveFave: PropTypes.func,
+    quote: PropTypes.string,
+    getQuote: PropTypes.func
+}
