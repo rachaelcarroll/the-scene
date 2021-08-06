@@ -11,7 +11,7 @@ export const FavesContainer = ({faves}) => {
             <Fave 
             key={i}
             id={i}
-            singleFave={fave}
+            favorite={fave}
             />
         )
     })
