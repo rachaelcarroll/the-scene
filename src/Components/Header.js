@@ -15,12 +15,12 @@ export const Header = ({ getQuote }) => {
             <div className='nav-btns'>
             <Route exact path='/quote' render={() => 
                 <NavLink to ='/faves'>
-                    <button className='fave-btn'>Faves</button>
+                    <button className='fave-btn'>faves</button>
                 </NavLink>
             } />
             <Route exact path='/faves' render={() => 
                 <NavLink to='/quote'>
-                    <button className='return-to-home' onClick={() => getQuote()}>Back to Home</button>
+                    <button className='return-to-home' onClick={() => getQuote()}>back to home</button>
                 </NavLink>
             } />
             </div>
