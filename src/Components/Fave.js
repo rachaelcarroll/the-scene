@@ -1,13 +1,13 @@
 import React from 'react';
-import { FiX } from "react-icons/fi";
+// import { FiX } from "react-icons/fi";
 import PropTypes from 'prop-types';
 
 
 export const Fave = ({favorite, id, removeFave}) => {
     return (
         <div className='fave-quote-container'>
-            <button id={id} onClick={(event) => removeFave(event)} className='remove-fave' alt='X icon to remove from favorites'>
-                <FiX />
+            <button id={id} onClick={(event) => removeFave(event)} className='remove-fave' alt='X icon to remove from favorites'> X
+                {/* <FiX /> */}
             </button>
             <p className='fave-quote'>{favorite}</p>
         </div>
