@@ -44,11 +44,10 @@ export const App = () => {
 
 
   return (
-    <>
+      <main>
       <Header 
       getQuote={getQuote}
       />
-      <main>
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
           <Route exact path= '/quote' render={() => 
@@ -66,7 +65,6 @@ export const App = () => {
           }/>
         </Switch>
       </main>
-    </>
   );
 }
 
