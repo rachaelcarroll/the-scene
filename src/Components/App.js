@@ -45,7 +45,9 @@ export const App = () => {
 
   return (
     <>
-      <Header />
+      <Header 
+      getQuote={getQuote}
+      />
       <main>
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
