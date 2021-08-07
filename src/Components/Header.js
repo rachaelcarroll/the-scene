@@ -1,8 +1,9 @@
+import { getQueriesForElement } from '@testing-library/react';
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Header = () => {
+export const Header = ({ getQuote }) => {
 
     return (
         <nav>
@@ -19,7 +20,7 @@ export const Header = () => {
             } />
             <Route exact path='/faves' render={() => 
                 <NavLink to='/quote'>
-                    <button className='return-to-quote'>Back To Home</button>
+                    <button className='return-to-home' onClick={() => getQuote()}>Back to Home</button>
                 </NavLink>
             } />
             </div>
