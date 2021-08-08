@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Header = ({ getQuote }) => {
+export const Header = ({ getQuote, faves }) => {
 
     return (
         <nav>
@@ -15,7 +15,7 @@ export const Header = ({ getQuote }) => {
             <div className='nav-btns'>
             <Route exact path='/quote' render={() => 
                 <NavLink to ='/faves'>
-                    <button className='fave-btn'>faves</button>
+                    <button className={faves.length ? 'has-faves' : ''}>faves</button>
                 </NavLink>
             } />
             <Route exact path='/faves' render={() => 

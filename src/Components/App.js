@@ -31,6 +31,8 @@ export const App = () => {
       if(!faves.includes(faveQuote)){
         setFaves([faveQuote].concat(faves))
       }
+      // console.log(hasFaves())
+      // hasFaves()
     }
 
     const removeFave = (event) => {
@@ -40,7 +42,14 @@ export const App = () => {
         }
       })
       setFaves(updatedFaves)
+      // console.log(hasFaves())
+      // hasFaves()
     }
+
+    // const hasFaves = () => {
+    //   console.log("FAVES ARRAY", faves.length)
+    //   return faves.length ? true : false
+    // }
 
 
   return (
@@ -51,6 +60,8 @@ export const App = () => {
           <>
           <Header 
             getQuote={getQuote}
+            // hasFaves={hasFaves}
+            faves={faves}
           />
           <Quote 
             saveFave={saveFave}
@@ -63,6 +74,8 @@ export const App = () => {
           <>
           <Header 
             getQuote={getQuote}
+            // hasFaves={hasFaves}
+            faves={faves}
           />
           <FavesContainer 
             faves={faves}
