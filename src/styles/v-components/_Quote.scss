@@ -3,13 +3,22 @@
     flex-direction: column;
     align-items: center;
     margin-top: 7rem;
+    background: rgba(244, 245, 220, .76);
+    place-self: center;
+    width: 65%;
+    box-shadow: 1px 8px 15px 2px black;
 }
 
 .quote {
-    margin: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1rem;
+    width: 100%;
 }
 
 .button-options {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
 }

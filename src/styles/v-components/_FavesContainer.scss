@@ -1,0 +1,11 @@
+.all-fave-quotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    grid-gap: 2rem;
+    gap: 2rem;
+    overflow-y: scroll;
+    margin: 2rem;
+    height: 100vh;
+    place-items: center;
+}
