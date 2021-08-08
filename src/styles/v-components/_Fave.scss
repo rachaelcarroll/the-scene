@@ -23,4 +23,10 @@
     align-items: center;
 }
 
+.remove-fave {
+    &:hover:before{
+        content: "x";
+        transition: 1s;
+    }
+}
 
