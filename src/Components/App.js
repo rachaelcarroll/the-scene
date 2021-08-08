@@ -45,23 +45,30 @@ export const App = () => {
 
   return (
       <main>
-      <Header 
-      getQuote={getQuote}
-      />
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
           <Route exact path= '/quote' render={() => 
+          <>
+          <Header 
+            getQuote={getQuote}
+          />
           <Quote 
             saveFave={saveFave}
             quote={quote}
             getQuote={getQuote}
           />
+          </>
           }/>
           <Route exact path= '/faves' render={() =>
+          <>
+          <Header 
+            getQuote={getQuote}
+          />
           <FavesContainer 
             faves={faves}
             removeFave={removeFave}
           />
+          </>
           }/>
         </Switch>
       </main>
