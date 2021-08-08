@@ -18,9 +18,12 @@ export const FavesContainer = ({faves, removeFave}) => {
     })
 
     return (
+        <>
+        {!faveQuote.length && <h2 className='no-faves-yet'>You don't have any faves yet. Start shufflin'!</h2>}
         <article className='all-fave-quotes'>
             {faveQuote}
         </article>
+        </>
     )
 
 }
