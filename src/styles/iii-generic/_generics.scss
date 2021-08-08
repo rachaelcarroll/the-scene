@@ -27,7 +27,12 @@
     border: 1px solid black;
     font-size: 1rem;
     letter-spacing: 1.5px;
+    background: rgba(244, 245, 220, .76);
+    transition: background-color 1s ease-out;
       &:hover{
-        transform: scale(1.02);
+        // transform: scale(1.01);
+        background-color: black;
+        color: antiquewhite;
+        border: 1px solid antiquewhite;
       }
   }
