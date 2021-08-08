@@ -14,11 +14,9 @@ body {
   
   nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 2rem;
-    height: 4rem;
-    background: rgba(244, 245, 220, 0.46)
+    // background: rgba(244, 245, 220, 0.7)
   }
 
   main {
