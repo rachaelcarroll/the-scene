@@ -14,3 +14,10 @@
     align-self: center;
     font-size: 2.5rem;
 }
+
+.has-faves {
+    background: url(https://img.icons8.com/fluency/48/000000/hearts.png) no-repeat;
+    background-position: center;
+    transition: 1s;
+    background-size: contain;
+}
