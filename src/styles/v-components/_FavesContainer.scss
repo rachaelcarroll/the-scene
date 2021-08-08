@@ -1,11 +1,21 @@
 .all-fave-quotes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
     grid-gap: 2rem;
     gap: 2rem;
     overflow-y: scroll;
     margin: 2rem;
     height: 100vh;
     place-items: center;
+}
+
+.no-faves-yet {
+    margin-top: 10rem;
+    text-align: center;
+    background: black;
+    width: 55%;
+    place-self: center;
+    color: rgba(244, 245, 220);
+    padding: 1rem;
+    box-shadow: 1px 8px 15px 2px black;
 }
