@@ -9,7 +9,7 @@ export const Header = ({ getQuote }) => {
         <nav>
             <NavLink to = '/'>
                 <header>
-                    <h1><i>the</i>scene</h1>
+                    <h1 className='header'><i>the</i>scene</h1>
                 </header>
             </NavLink>
             <div className='nav-btns'>

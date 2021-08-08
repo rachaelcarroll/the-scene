@@ -7,8 +7,7 @@ import PropTypes from 'prop-types';
 export const Fave = ({favorite, id, removeFave}) => {
     return (
         <div className='fave-quote-container'>
-            <button id={id} onClick={(event) => removeFave(event)} className='remove-fave' alt='X icon to remove from favorites'> remove from faves
-            </button>
+            <button id={id} onClick={(event) => removeFave(event)} className='remove-fave' alt='X icon to remove from favorites'> remove fave</button>
             <p className='fave-quote'>"{favorite}"</p>
         </div>
       )
