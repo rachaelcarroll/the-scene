@@ -8,7 +8,8 @@
     text-decoration: none;
     &:focus, &:hover, &:visited, &:link, &:active {
       text-decoration: none;
-      place-self: center;
+      // place-self: center;
+      cursor: pointer;
     }
   }
   
@@ -26,4 +27,7 @@
     border: 1px solid black;
     font-size: 1rem;
     letter-spacing: 1.5px;
+      &:hover{
+        transform: scale(1.02);
+      }
   }
