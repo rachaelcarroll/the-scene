@@ -9,7 +9,7 @@ export const Fave = ({favorite, id, removeFave}) => {
         <div className='fave-quote-container'>
             <button id={id} onClick={(event) => removeFave(event)} className='remove-fave' alt='X icon to remove from favorites'> remove from faves
             </button>
-            <p className='fave-quote'>{favorite}</p>
+            <p className='fave-quote'>"{favorite}"</p>
         </div>
       )
 }
