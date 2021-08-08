@@ -8,8 +8,8 @@ export const Header = ({ getQuote }) => {
     return (
         <nav>
             <NavLink to = '/'>
-                <header className='header'>
-                    <h1><i>the</i>scene</h1>
+                <header>
+                    <h1 className='header'><i>the</i>scene</h1>
                 </header>
             </NavLink>
             <div className='nav-btns'>
