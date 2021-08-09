@@ -18,8 +18,8 @@ export const Quote = ({ saveFave, quote, getQuote, bounceHeart, isLoading }) => 
         event.preventDefault();
         passFave(quote);
         setMessage('Added to Faves')
-        setTimeout(() => setMessage(''), 2000);
-        getQuote();
+        setTimeout(() => setMessage(''), 2500);
+        setTimeout(() => getQuote(), 2000);
     }
     return (
         <section className='quote-container'>
