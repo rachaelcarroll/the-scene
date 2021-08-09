@@ -8,7 +8,7 @@ export const Header = ({ getQuote, faves }) => {
         <nav>
             <NavLink to = '/'>
                 <header>
-                    <h1 className='header'><i>the</i>scene</h1>
+                    <h1 className='header'>the<i>scene</i></h1>
                 </header>
             </NavLink>
             <div className='nav-btns'>
