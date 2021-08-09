@@ -6,18 +6,17 @@ import loadingGif from '../images/loadingGif.gif'
 
 export const Quote = ({ saveFave, quote, getQuote, isLoading }) => {
 
-    const [ message, setMessage ] = useState('');
+    const [ message, setMessage ] = useState(false);
 
     const passFave = (quote) => {
-        console.log("QUOTE!!", quote)
         saveFave(quote)
     }
 
     const onClick = (event) => {
         event.preventDefault();
         passFave(quote);
-        setMessage('Added to Faves')
-        setTimeout(() => setMessage(''), 2500);
+        setMessage(true)
+        setTimeout(() => setMessage(false), 2000);
         setTimeout(() => getQuote(), 2000);
     }
     return (
@@ -29,7 +28,7 @@ export const Quote = ({ saveFave, quote, getQuote, isLoading }) => {
             <div className='button-options'>
                 <button className='save-to-faves' onClick={(event) => onClick(event)}>wow, that's good. save to faves.</button>
                 <button className='shuffle-quote' onClick={() => getQuote()}>shuffle that scene.</button>
-            {!!message && <div className='message-container'>
+            {message && <div className='message-container'>
                 <img src='https://img.icons8.com/fluency/48/000000/like.png' alt='heart'></img>
             </div>}
             </div>
@@ -38,7 +37,9 @@ export const Quote = ({ saveFave, quote, getQuote, isLoading }) => {
 }
 
 Quote.propTypes = {
+    message: PropTypes.bool,
     saveFave: PropTypes.func,
     quote: PropTypes.string,
-    getQuote: PropTypes.func
+    getQuote: PropTypes.func,
+    isLoading: PropTypes.bool
 }
