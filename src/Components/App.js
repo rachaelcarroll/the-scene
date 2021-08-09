@@ -42,15 +42,13 @@ export const App = () => {
         }
       })
       setFaves(updatedFaves)
-      // console.log(hasFaves())
-      // hasFaves()
     }
 
-    // const hasFaves = () => {
-    //   console.log("FAVES ARRAY", faves.length)
-    //   return faves.length ? true : false
-    // }
-
+    const bounceHeart = () => {
+      const faveClass = [".has-fave"];
+      faveClass.push(".bounce")
+    }
+    // faves.length ? document.querySelector('.has-faves').className.add = 'bounce' : document.querySelector('.fave-btn').className.add = 'bounce'
 
   return (
       <main>
@@ -67,6 +65,7 @@ export const App = () => {
             saveFave={saveFave}
             quote={quote}
             getQuote={getQuote}
+            bounceHeart={bounceHeart}
           />
           </>
           }/>
