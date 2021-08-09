@@ -1,7 +1,5 @@
 .quote-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, center);
     place-self: center;
     margin-top: 7rem;
     width: 65%;
@@ -11,6 +9,7 @@
 }
 
 .quote {
+    @include mediaQueries(quote);
     font-size: 3.5rem;
     text-align: center;
     background: $color-dark;
@@ -21,10 +20,8 @@
 }
 
 .button-options {
-    display: flex;
-    flex-direction: row-reverse;
+    @include flex(row-reverse, between);
     width: 100%;
-    justify-content: space-between;
 }
 
 .shuffle-quote {
@@ -44,29 +41,3 @@
 }
   
 
-@media only screen and (min-width: 250px) {
-
-  .quote {
-     font-size: 2rem;
-     transition: 1s;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-
-  .quote {
-    font-size: 2.5rem;
-    transition: 1s;
-   }
-
-}
-
-@media only screen and (min-width: 1000px) {
-
-    .quote {
-      font-size: 3.5rem;
-      transition: 1s;
-     }
-  
-  }
