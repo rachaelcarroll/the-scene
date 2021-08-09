@@ -1,6 +1,7 @@
 import React from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
+import loadingGif from '../images/loadingGif.gif'
 
 
 export const Quote = ({ saveFave, quote, getQuote, bounceHeart, isLoading }) => {
@@ -17,7 +18,9 @@ export const Quote = ({ saveFave, quote, getQuote, bounceHeart, isLoading }) => 
     }
     return (
         <section className='quote-container'>
-            {isLoading && <article className='quote'>Loading...</article>}
+            {isLoading && <article className='quote'>
+                <img src={loadingGif} alt='loading animation'></img>
+            </article>}
             <article className='quote'>{quote}</article>
             <div className='button-options'>
                 <button className='shuffle-quote' onClick={() => getQuote()}>shuffle that scene.</button>
