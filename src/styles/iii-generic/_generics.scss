@@ -8,7 +8,6 @@
     text-decoration: none;
     &:focus, &:hover, &:visited, &:link, &:active {
       text-decoration: none;
-      // place-self: center;
       cursor: pointer;
     }
   }
@@ -24,15 +23,15 @@
     background: none;
     cursor: pointer;
     text-transform: none;
-    border: 1px solid black;
+    border: 1px solid $color-dark;
     font-size: 1rem;
+    font-family: $font-family-secondary;
     letter-spacing: 1.5px;
-    background: rgba(244, 245, 220, .76);
+    background: $color-background;
     transition: background-color 1s ease-out;
       &:hover{
-        // transform: scale(1.01);
-        background-color: black;
-        color: antiquewhite;
-        border: 1px solid antiquewhite;
+        background-color: $color-dark;
+        color: $color-primary;
+        border: 1px solid $color-primary;
       }
   }
