@@ -37,18 +37,3 @@ body {
       }
   }
 
-  h1 {
-    @include heading;
-  }
-  
-  h2 {
-    @include subheading;
-  }
-  
-  h3 {
-    @include paragraph;
-  }
-  
-  p {
-    @include paragraph;
-  }
