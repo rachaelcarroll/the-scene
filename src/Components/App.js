@@ -34,8 +34,6 @@ export const App = () => {
       if(!faves.includes(faveQuote)){
         setFaves([faveQuote].concat(faves))
       }
-      // console.log(hasFaves())
-      // hasFaves()
     }
 
     const removeFave = (event) => {
@@ -47,17 +45,12 @@ export const App = () => {
       setFaves(updatedFaves)
     }
 
-    const bounceHeart = () => {
-      const faveClass = [".has-faves"];
-      faveClass.push(".bounce")
-    }
-    // faves.length ? document.querySelector('.has-faves').className.add = 'bounce' : document.querySelector('.fave-btn').className.add = 'bounce'
 
   return (
       <main>
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
-          {error && !isLoading && <h2 className='error'>Oops, server seems to be down. Please try again later!</h2>}
+          {error && !isLoading && <h2 className='error'>{error}</h2>}
           <Route exact path= '/quote' render={() => 
           <>
           <Header 
@@ -69,7 +62,6 @@ export const App = () => {
             saveFave={saveFave}
             quote={quote}
             getQuote={getQuote}
-            bounceHeart={bounceHeart}
           />
           </>
           }/>
