@@ -1,8 +1,6 @@
 import React from 'react';
 import { Fave } from './Fave';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-
 
 export const FavesContainer = ({faves, removeFave}) => {
 
