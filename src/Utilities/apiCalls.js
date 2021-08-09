@@ -1,9 +1,21 @@
-// export const fetchQuote = () => {
-//     return fetch('https://binaryjazz.us/wp-json/genrenator/v1/story/1')
-//     .then(response => {
-//       if (!response.ok) {
-//         throw Error()
-//       }
-//       return response.json()
-//     })
-//   }
+export const fetchQuote = async () => {
+    let url = 'https://binaryjazz.us/wp-json/genrenator/v1/story/1';
+    let response = await fetch(url);
+    let data = await checkForErrors(response);
+    return data;
+  };
+
+  
+export const checkForErrors = response => {
+    if (response.status === 404) {
+      throw new Error('Oops, something went wrong. Please check back later.');
+    } else if (response.status === 500) {
+      throw new Error(
+        "Our servers are down, please check back later!"
+      );
+    } else if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Something went wrong');
+    }
+  };
