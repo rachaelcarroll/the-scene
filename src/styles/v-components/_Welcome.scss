@@ -7,6 +7,18 @@
     place-self: center;
     width: 65%;
     box-shadow: 1px 8px 15px 2px black;
+    animation: 1s fade-in-delay ease-in;
+
+    @keyframes fade-in-delay{
+        from {
+           opacity: 0;
+          }
+         60% { 
+           opacity: .5; }
+         to {
+            opacity: 1; 
+           }
+       }
 }
 
 .welcome {

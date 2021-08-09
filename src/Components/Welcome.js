@@ -1,7 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 export const Welcome = () => {
 
@@ -12,10 +10,9 @@ export const Welcome = () => {
             <p className='welcome-intro'>We take the effort out of sounding <i>hip</i> in the music scene.</p>
             <p className='welcome-question'>Ready to spark up a convo?</p>
             <NavLink to= '/quote'>
-                <button>click here</button>
+                <button className='go-to-quote'>click here</button>
             </NavLink>
         </article>
         </>
     )
-
 }
