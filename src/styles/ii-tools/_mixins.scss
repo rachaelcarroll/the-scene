@@ -1,0 +1,78 @@
+/* === Fonts === */
+@mixin heading {
+    @include scaling($font-size-heading, font);
+  }
+  
+  @mixin subheading {
+    @include scaling($font-size-subheading, font);
+  }
+  
+  @mixin paragraph {
+    @include scaling($font-size-paragraph, font);
+  }
+  
+  @mixin button {
+    @include scaling($font-size-button, font);
+  }
+
+/* === Grid === */
+@mixin grid($viewport) {
+    display: grid;
+    justify-items: center;
+    @if $viewport==mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1rem 1rem;
+    } @else if $viewport==tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 2rem;
+    } @else if $viewport==desktop{
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem 4rem;
+    }
+  }
+
+/* === Media Queries === */
+@mixin mobile($property) {
+    @media only screen and (min-width: 250px) {
+      @content;
+      transition: 100ms;
+      @if $property==grid{
+        @include grid(mobile) 
+      }
+    }
+  }
+  
+  @mixin tablet($property) { 
+    @media only screen and (min-width: 768px) {
+      @content;
+      transition: 100ms;
+      @if $property==grid{
+        @include grid(tablet) 
+      }
+    }
+  }
+
+  @mixin desktop($property) {
+    @media only screen and (min-width: 1024px) {
+      @content;
+      transition: 100ms;
+      @if $property==grid{
+        @include grid(desktop) 
+      }
+    }
+  }
+
+/* === Helpers === */
+
+@mixin scaling($value, $property) {
+    @if $property==font {
+    font-size: clamp($value);
+    } 
+  }
+
+  @mixin mediaQueries($property) {
+    @include mobile($property);
+    @include tablet($property);
+    @include desktop($property);
+  }
+  
