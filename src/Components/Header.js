@@ -1,7 +1,6 @@
-import { getQueriesForElement } from '@testing-library/react';
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 
 export const Header = ({ getQuote, faves }) => {
 
@@ -9,7 +8,7 @@ export const Header = ({ getQuote, faves }) => {
         <nav>
             <NavLink to = '/'>
                 <header>
-                    <h1 className='header'><i>the</i>scene</h1>
+                    <h1 className='header'>the<i>scene</i></h1>
                 </header>
             </NavLink>
             <div className='nav-btns'>
@@ -17,13 +16,18 @@ export const Header = ({ getQuote, faves }) => {
                 <NavLink to ='/faves'>
                     <button className={faves.length ? 'has-faves' : ''}>faves</button>
                 </NavLink>
-            } />
+            }/>
             <Route exact path='/faves' render={() => 
                 <NavLink to='/quote'>
                     <button className='return-to-home' onClick={() => getQuote()}>back to home</button>
                 </NavLink>
-            } />
+            }/>
             </div>
         </nav>
     )
+}
+
+Header.propTypes = {
+    getQuote: PropTypes.func,
+    faves: PropTypes.array
 }

@@ -2,23 +2,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7rem;
-    background: rgba(244, 245, 220, .76);
     place-self: center;
     width: 65%;
-    box-shadow: 1px 8px 15px 2px black;
+    margin-top: 7rem;
+    background: $color-background;
+    box-shadow: $box-shadow;
+    animation: 1s fade-in-delay ease-in;
 }
 
 .welcome {
+    @include mediaQueries(welcome-header);
     font-size: 2.5rem;
+    font-family: $font-family-primary;
     text-align: center;
-    background: black;
-    color: white;
     padding: 1rem;
     width: 100%;
+    background: $color-dark;
+    color: $color-light;
 }
 
 .welcome-intro {
+    @include mediaQueries(welcome-intro);
+    font-family: $font-family-secondary;
     margin: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.welcome-question {
+    @include mediaQueries(welcome-question);
+    font-family: $font-family-secondary;
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    font-size: 1rem;
 }

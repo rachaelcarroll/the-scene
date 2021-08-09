@@ -3,21 +3,19 @@
     align-items: center;
 }
 
-// .fave-btn {
-//     font-size: 1rem;
-//     letter-spacing: 1.5px;
-// }
-
 .header {
-    color: black;
+    @include mediaQueries(title);
+    color: $color-dark;
     margin-left: 1rem;
     align-self: center;
     font-size: 2.5rem;
+    font-family: $font-family-primary;
 }
 
 .has-faves {
     background: url('https://img.icons8.com/fluency/48/000000/like.png') no-repeat;
     background-position: center;
-    transition: 1s;
     background-size: contain;
+    transition: 1s;
 }
+

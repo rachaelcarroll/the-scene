@@ -5,8 +5,10 @@ import { Quote } from './Quote';
 import { FavesContainer } from './FavesContainer';
 import { Welcome } from './Welcome';
 import { fetchQuote } from '../Utilities/apiCalls';
+import PropTypes from 'prop-types';
 
 export const App = () => {
+  
   const [ faves, setFaves ] = useState([]);
   const [ quote, setQuote ] = useState('');
   const [ isLoading, setIsLoading ] = useState(true)
@@ -26,24 +28,24 @@ export const App = () => {
     }
   }
 
-    useEffect(() => {
-        getQuote();
-    }, [])
- 
-    const saveFave = (faveQuote) => {
-      if(!faves.includes(faveQuote)){
-        setFaves([faveQuote].concat(faves))
-      }
-    }
+  useEffect(() => {
+    getQuote();
+  }, [])
 
-    const removeFave = (event) => {
-      const updatedFaves = faves.filter((quote, i) => {
-        if(i !== parseFloat(event.target.id)) {
-          return quote
-        }
-      })
-      setFaves(updatedFaves)
+  const saveFave = (faveQuote) => {
+    if(!faves.includes(faveQuote)){
+      setFaves([faveQuote].concat(faves))
     }
+  }
+
+  const removeFave = (event) => {
+    const updatedFaves = faves.filter((quote, i) => {
+      if(i !== parseFloat(event.target.id)) {
+        return quote
+      }
+    })
+    setFaves(updatedFaves)
+  }
 
 
   return (
@@ -52,30 +54,30 @@ export const App = () => {
           <Route exact path= '/' component={ Welcome }/>
           {error && !isLoading && <h2 className='error'>{error}</h2>}
           <Route exact path= '/quote' render={() => 
-          <>
-          <Header 
-            getQuote={getQuote}
-            faves={faves}
-          />
-          <Quote 
-            isLoading={isLoading}
-            saveFave={saveFave}
-            quote={quote}
-            getQuote={getQuote}
-          />
-          </>
+            <>
+            <Header 
+              getQuote={getQuote}
+              faves={faves}
+            />
+            <Quote 
+              isLoading={isLoading}
+              saveFave={saveFave}
+              quote={quote}
+              getQuote={getQuote}
+            />
+            </>
           }/>
           <Route exact path= '/faves' render={() =>
-          <>
-          <Header 
-            getQuote={getQuote}
-            faves={faves}
-          />
-          <FavesContainer 
-            faves={faves}
-            removeFave={removeFave}
-          />
-          </>
+            <>
+            <Header 
+              getQuote={getQuote}
+              faves={faves}
+            />
+            <FavesContainer 
+              faves={faves}
+              removeFave={removeFave}
+            />
+            </>
           }/>
         </Switch>
       </main>
@@ -83,3 +85,13 @@ export const App = () => {
 }
 
 export default App;
+
+App.propTypes = {
+  quote: PropTypes.string,
+  faves: PropTypes.array,
+  isLoading: PropTypes.bool,
+  error: PropTypes.string,
+  getQuote: PropTypes.func,
+  saveFave: PropTypes.func,
+  removeFave: PropTypes.func
+}

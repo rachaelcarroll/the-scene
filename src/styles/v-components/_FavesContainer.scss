@@ -1,7 +1,6 @@
+
 .all-fave-quotes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    @include mediaQueries(grid);
     gap: 2rem;
     overflow-y: scroll;
     margin: 2rem;
@@ -11,27 +10,12 @@
 
 .no-faves-yet {
     margin-top: 10rem;
-    text-align: center;
-    background: black;
-    width: 55%;
-    place-self: center;
-    color: rgba(244, 245, 220);
     padding: 1rem;
-    box-shadow: 1px 8px 15px 2px black;
-}
-
-@media only screen and (max-width: 480px) {
-
-    .all-fave-quotes {
-        grid-template-columns: 1fr;
-      }
-
-}
-
-@media only screen and (max-width: 770px) {
-
-    .all-fave-quotes {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
+    text-align: center;
+    place-self: center;
+    width: 55%;
+    background: $color-dark;
+    color: $color-primary;
+    box-shadow: $box-shadow;
+    font-family: $font-family-primary;
 }
