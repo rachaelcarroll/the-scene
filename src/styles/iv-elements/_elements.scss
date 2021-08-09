@@ -35,5 +35,20 @@ body {
         margin-top: 15rem;
         padding: 1rem;
       }
+  }
+
+  h1 {
+    @include heading;
+  }
   
+  h2 {
+    @include subheading;
+  }
+  
+  h3 {
+    @include paragraph;
+  }
+  
+  p {
+    @include paragraph;
   }
