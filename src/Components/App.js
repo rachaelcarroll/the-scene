@@ -8,6 +8,7 @@ import { fetchQuote } from '../Utilities/apiCalls';
 import PropTypes from 'prop-types';
 
 export const App = () => {
+  
   const [ faves, setFaves ] = useState([]);
   const [ quote, setQuote ] = useState('');
   const [ isLoading, setIsLoading ] = useState(true)
@@ -82,6 +83,8 @@ export const App = () => {
       </main>
   );
 }
+
+export default App;
 
 App.propTypes = {
   quote: PropTypes.string,
