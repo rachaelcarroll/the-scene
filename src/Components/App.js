@@ -4,6 +4,7 @@ import { Header } from './Header.js';
 import { Quote } from './Quote';
 import { FavesContainer } from './FavesContainer';
 import { Welcome } from './Welcome';
+import { fetchQuote } from '../Utilities/apiCalls';
 
 export const App = () => {
   const [ faves, setFaves ] = useState([]);
@@ -11,20 +12,22 @@ export const App = () => {
   const [ isLoading, setIsLoading ] = useState(true)
   const [ error, setError ] = useState('');
 
-    const getQuote = async () => {
-        const url = 'https://binaryjazz.us/wp-json/genrenator/v1/story/1'
-        try {
-            let response = await fetch(url)
-            const quote = await response.json()
-            setIsLoading(false)
-            return setQuote(quote)
-        } catch (error) {
-            setError(error.message)
-        }
+  const getQuote = async () => {
+    setIsLoading(true)
+    setError('')
+    setQuote('')
+    try {
+        let quote = await fetchQuote()
+        setIsLoading(false);
+        setQuote(`"${quote}"`)
+      } catch (error) {
+        setError(error.message)
+        setIsLoading(false);
     }
+  }
 
     useEffect(() => {
-        getQuote()
+        getQuote();
     }, [])
  
     const saveFave = (faveQuote) => {
@@ -45,7 +48,7 @@ export const App = () => {
     }
 
     const bounceHeart = () => {
-      const faveClass = [".has-fave"];
+      const faveClass = [".has-faves"];
       faveClass.push(".bounce")
     }
     // faves.length ? document.querySelector('.has-faves').className.add = 'bounce' : document.querySelector('.fave-btn').className.add = 'bounce'
@@ -54,14 +57,15 @@ export const App = () => {
       <main>
         <Switch>
           <Route exact path= '/' component={ Welcome }/>
+          {error && !isLoading && <h2 className='error'>Oops, server seems to be down. Please try again later!</h2>}
           <Route exact path= '/quote' render={() => 
           <>
           <Header 
             getQuote={getQuote}
-            // hasFaves={hasFaves}
             faves={faves}
           />
           <Quote 
+            isLoading={isLoading}
             saveFave={saveFave}
             quote={quote}
             getQuote={getQuote}
@@ -73,7 +77,6 @@ export const App = () => {
           <>
           <Header 
             getQuote={getQuote}
-            // hasFaves={hasFaves}
             faves={faves}
           />
           <FavesContainer 
