@@ -11,11 +11,11 @@ export const checkForErrors = response => {
       throw new Error('Oops, something went wrong. Please check back later.');
     } else if (response.status === 500) {
       throw new Error(
-        "Our servers are down, please check back later!"
+        "Well this is embarrassing... our servers seem to be down, please check back later!"
       );
     } else if (response.ok) {
       return response.json();
     } else {
-      throw new Error('Something went wrong');
+      throw new Error('Oops, something went wrong. Please try again!');
     }
   };
