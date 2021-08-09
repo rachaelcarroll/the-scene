@@ -37,18 +37,25 @@ it('Should be able to shuffle a quote', () => {
     cy.get('.quote-container').get('.quote').contains('didgeridoo improvisational')
 })
 
-it('Should be able to favorite a quote and view the favorites', () => {
+it('Should be able to favorite a quote', () => {
     cy.visitQuotePage();
-    cy.get('.quote-container')
-    cy.get('.button-options')
-    cy.get('.save-to-faves').click()
+    cy.addFavorite();
     cy.get('nav').get('.nav-btns').get('.has-faves').should('have.css', 'background').and('include', 'https://img.icons8.com/fluency/48/000000/like.png')
 })
 
-// it('Should be able to navigate to faves page', () => {
-//     cy.visitQuotePage();
-//     cy.get('nav').get('.nav-btns').get('.has-faves')
-// })
+it('Should be able to navigate to faves page', () => {
+    cy.visitQuotePage();
+    cy.addFavorite();
+    cy.get('nav').get('.nav-btns').get('.has-faves').click()
+    cy.get('.fave-quote').contains('polo')
+})
 
+it.only('Should be able to remove a fave', () => {
+    cy.visitQuotePage();
+    cy.addFavorite();
+    cy.get('nav').get('.nav-btns').get('.has-faves').click()
+    cy.get('.fave-quote-container').get('.remove-fave').click()
+    cy.get('main').contains('Start shufflin')
+})
 
 })
