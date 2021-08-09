@@ -1,19 +1,7 @@
 /* === Font Import === */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
-/* === Defaults === */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@97,398&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-$font-family-primary: 'Raleway', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
-$font-size-defaults: 1rem;
-$font-style-defaults: normal;
-$font-line-height-defaults: 1rem;
-$font-weight-defaults: normal;
-$font-style-defaults: normal;
-
-/* === Font Size === */
-$font-size-heading: 4rem, 5vw, 7rem;
-$font-size-subheading: 1rem, 2vw, 2.5rem;     
-$font-size-paragraph: 1rem, 1vw, 2.5rem;
-$font-size-button: 1rem, 1.2vw, 2rem;
-$font-size-icon: 1.5rem, 3vw, 3rem;
+$font-family-primary: 'Inconsolata', monospace;
+$font-family-secondary: 'Arial', sans-serif;
 
