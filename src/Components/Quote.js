@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 import loadingGif from '../images/loadingGif.gif'
 
 
-export const Quote = ({ saveFave, quote, getQuote, bounceHeart, isLoading }) => {
+export const Quote = ({ saveFave, quote, getQuote, isLoading }) => {
 
     const [ message, setMessage ] = useState('');
-    const [ timer, setTimer ] = useState('');
 
     const passFave = (quote) => {
         console.log("QUOTE!!", quote)
@@ -31,7 +30,6 @@ export const Quote = ({ saveFave, quote, getQuote, bounceHeart, isLoading }) => 
                 <button className='save-to-faves' onClick={(event) => onClick(event)}>wow, that's good. save to faves.</button>
                 <button className='shuffle-quote' onClick={() => getQuote()}>shuffle that scene.</button>
             {!!message && <div className='message-container'>
-                {/* <h3 className='fave-popup'>{message}</h3> */}
                 <img src='https://img.icons8.com/fluency/48/000000/like.png' alt='heart'></img>
             </div>}
             </div>
