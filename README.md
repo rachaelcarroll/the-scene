@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <p align="center">the<i>scene</i></p>
 
-## Available Scripts
+<br>
+<br>
 
-In the project directory, you can run:
+### Table of Contents
+- [Overview](#overview)
+- [Learning Goals](#learning-goals)
+- [Installation & Viewing](#installation-and-viewing)
+- [Functionality](#functionality)
+- [Future Additions](#future-additions)
+- [Tech Stack](#tech-stack)
+- [Contributor](#contributor)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Perhaps you've been invited on a date with a musician, or you've found yourself at a party of hipsters who love to chat music, or maybe you just want to find a new genre or two. Well, friend, you're in luck... the<i>scene</i> takes the effort out of sounding *hip* in the music scene and kicks off the conversation for you.  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+the<i>scene</i> was built with React, using the [The Genrenator API](https://binaryjazz.us/wp-json/genrenator/v1/story/) to display a random genre and story to shuffle through and save to favorites. This application was built as the final solo project of Mod3 at [Turing](turing.edu).  The goal was to build an application for a niche audience using React, React Router, a third party API, and Cypress.
 
-### `npm test`
+View original project spec here: [project](https://frontend.turing.edu/projects/module-3/niche-audience.html)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Learning Goals
 
-### `npm run build`
+To solidify and demonstrate the understanding of:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React fundementals and modular code architecture
+- Router to create a multi-page and sophisticated UX
+- Cypress testing to test the application end-to-end
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Viewing 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application is deployed to Vercel. You may view the live application [here](https://the-scene.vercel.app/).
 
-### `npm run eject`
+To view this application on your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Clone down this repository
+- Run `npm i` in your terminal
+- Run `npm start` in your terminal
+- To view Cypress tests, open a separate tab in your terminal and run `npm run cypress`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Functionality 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Welcome <br>
+![Demo of launch page](./src/images/welcome.gif) 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Shufflin' & Favoriting
+- User may shuffle until they find a convo starter that speaks to them, and favorite it!<br>
+![Demo of shufflin'](./src/images/shufflin.gif)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### View Favorites
+- User may view all favorites and remove ones that they no longer want. <br>
+![Demo of favoriting](./src/images/favorites.gif)
+ 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Mobile View/Responsive
+- Site is responsive and will change layouts across desktop, tablet, and phone screens<br>
+![Demo of responsiveness across media](./src/images/mobile.gif)
 
-### Code Splitting
+## Future Additions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- *Link to learn more*: Link to Google to learn more about a genre. 
+- *Music*: Using the Spotify API to bring in background music to add a little pizazz! 
+- *Local Storage*: Adding local storage functionality to save and view favorites at any time on a device.
 
-### Analyzing the Bundle Size
+## <p align="center"> Tech Stack </p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<div align="center">  
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square" alt="JavaScript Badge">
+<img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square" alt="CSS3 Badge">
+<img src="https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff&style=flat-square" alt="Sass Badge"> 
+<img src="https://img.shields.io/badge/Cypress-17202C?logo=cypress&logoColor=fff&style=flat-square" alt="Cypress Badge"> 
+</div> 
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributor
+### Author
+<table>
+     <tr>
+        <td> Rachael Carroll <a href="https://github.com/rachaelcarroll">GitHub</td>
+      </tr>
+      </tr>
+<td><img src="https://avatars.githubusercontent.com/u/76228573?v=4" alt="Rachael Carroll photo"
+width="150" height="auto" /></td>
+    </tr>
+</table>
 
-### Advanced Configuration
+### Project Managers
+- [Kayla Gordon](https://github.com/kaylaewood)
+- [Scott Ertmer](https://github.com/sertmer)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**************************************************************************
 
-### Deployment
+**[Back to top](#table-of-contents)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
