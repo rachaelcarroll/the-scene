@@ -17,7 +17,7 @@ Perhaps you've been invited on a date with a musician, or you've found yourself 
 
 the<i>scene</i> was built with React, using the [The Genrenator API](https://binaryjazz.us/wp-json/genrenator/v1/story/) to display a random genre and story to shuffle through and save to favorites. This application was built as the final solo project of Mod3 at [Turing](turing.edu).  The goal was to build an application for a niche audience using React, React Router, a third party API, and Cypress.
 
-View original project spec here: [project](https://frontend.turing.edu/projects/module-3/niche-audience.html)
+View original project spec [here.](https://frontend.turing.edu/projects/module-3/niche-audience.html)
 
 ### Learning Goals
 
@@ -63,9 +63,9 @@ To view this application on your local machine:
 - *Music*: Using the Spotify API to bring in background music to add a little pizazz! 
 - *Local Storage*: Adding local storage functionality to save and view favorites at any time on a device.
 
-## <p align="center"> Tech Stack </p>
+## Tech Stack
 
-<div align="center">  
+<div align="left">  
 <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square" alt="JavaScript Badge">
 <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square" alt="CSS3 Badge">
