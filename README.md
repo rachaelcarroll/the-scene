@@ -56,7 +56,7 @@ To view this application on your local machine:
 #### Mobile View/Responsive
 - Site is responsive and will change layouts across desktop, tablet, and phone screens<br>
 <img src="https://user-images.githubusercontent.com/76228573/128801402-1eb28bac-92c8-4391-af74-0998f8e0f4c1.png" alt="mobile view"
-width="150" height="auto"/> <img src="https://user-images.githubusercontent.com/76228573/128801682-2d0b9ed4-c0c4-4d1e-be85-f380ba1ec734.png" alt="tablet view" width="200" height="auto"/> <img src="https://user-images.githubusercontent.com/76228573/128801845-4482de83-02b6-4429-ba3d-80e63b1518dc.png" alt="desktop view" width="500" height="auto"/> 
+width="100" height="200"/> <img src="https://user-images.githubusercontent.com/76228573/128801682-2d0b9ed4-c0c4-4d1e-be85-f380ba1ec734.png" alt="tablet view" width="200" height="250"/> <img src="https://user-images.githubusercontent.com/76228573/128801845-4482de83-02b6-4429-ba3d-80e63b1518dc.png" alt="desktop view" width="400" height="auto"/> 
 
 
 ## Future Additions
