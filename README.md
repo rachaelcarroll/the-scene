@@ -9,7 +9,7 @@
 - [Functionality](#functionality)
 - [Future Additions](#future-additions)
 - [Tech Stack](#tech-stack)
-- [Contributor](#contributor)
+- [Contributors](#contributors)
 
 ## Overview
 
@@ -75,7 +75,7 @@ To view this application on your local machine:
 
 <br>
 
-## Contributor
+## Contributors
 ### Author
 <table>
      <tr>
