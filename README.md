@@ -1,8 +1,6 @@
 
 # <p align="center">the<i>scene</i></p>
 
-<br>
-<br>
 
 ### Table of Contents
 - [Overview](#overview)
