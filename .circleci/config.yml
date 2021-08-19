@@ -8,3 +8,4 @@ workflows:
     jobs:
       - cypress/run:
           start: npm start
+
