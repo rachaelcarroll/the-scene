@@ -4,9 +4,9 @@ describe("Main Page", () => {
         cy.initialVisit();
       })
 
-    it('Should be able to visit the site and see a welcome message displayed', () => {
-        cy.contains('Welcome to the scene...')
-    })
+    // it('Should be able to visit the site and see a welcome message displayed', () => {
+    //     cy.contains('Welcome to the scene...')
+    // })
 
     it('Should display a button to click', () => {
         cy.get('button').contains('click here')
